@@ -1,0 +1,41 @@
+- Xử lý onChange tại input
+    + setInput render lại view
+    + setShowSuggestions(true)
+    + setFilteredSuggestions(linked)
+    + setActiveSuggestionIndex(0) (css active thẻ li đầu tiên)
+- Xử lý onKeyDown tại input
+    + enter: 
+        setActiveSuggestionIndex(0); //reset
+        setShowSuggestions(false); //reset
+        setInput(filteredSuggestions[activeSuggestionIndex]); // render lại view
+    + (e.keyCode === 40) // down arrow
+        đag ở cuối mảng thì chuyển activeSuggestionIndex = 0 để lên lại đầu mảng
+    + (e.keyCode === 40) // down arrow
+        đag ở đầu mảng thì chuyển activeSuggestionIndex = filteredSuggestions.length - 1 để lên lại đầu mảng
+- Xử lý highlight keyword khi đag onChange
+    /* Highlight keyword in suggestions */
+    const SuggestionItem = ({ data }) => {
+        if (!input.trim()) {
+            return <span>{data}</span>;
+        }
+        const escapeRegExp = (str = "") => str.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+        const regex = new RegExp(`(${escapeRegExp(input)})`, "gi");
+        const parts = data.split('a');
+        return (
+            <span className='abc'>
+                {parts
+                    // .filter(part => {
+                    //     return part
+                    // })
+                    .map((part, i) =>
+                        regex.test(part) ? (
+                            <span className="highlight" key={i}>{part}</span>
+                        ) : (
+                            <span className="no-highlight" key={i}>{part}</span>
+                        )
+                    )}
+            </span>
+        );
+    };
+- Xử lý Submit:
+    + truyền giá trị hợp lệ trong input ra Com cha để call Api render lại list
