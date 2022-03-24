@@ -1,0 +1,245 @@
+@import "../../../assets/css/base";
+
+// Style popup upload avartar
+.upload-avatar-container {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        padding: 1.6rem;
+        border-bottom: unset;
+      }
+      .upload-body {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem;
+
+        &__image {
+          background: $col_gray-300;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: rem(140);
+          height: rem(140);
+          border-radius: 50%;
+          cursor: pointer;
+          .img-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        &__control {
+          p {
+            padding-top: rem(14);
+            font-weight: 400;
+            font-size: rem(12);
+            color: $col_gray-600;
+          }
+        }
+      }
+
+      .modal-footer {
+        padding: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        .msg-err-container {
+          color: $col_red;
+          img {
+            margin-right: 1rem;
+          }
+          span {
+            font-size: rem(12);
+          }
+        }
+        .btn-control {
+          display: flex;
+        }
+      }
+
+      .btn-cancel-upload {
+        color: $col_black;
+        margin-right: 1rem;
+      }
+
+      .btn-confirm-upload {
+        background: $col_blue-10;
+        color: $col-white;
+        font-weight: 500;
+        font-size: rem(14);
+      }
+
+      .smallIcon {
+        width: 32px !important;
+      }
+    }
+  }
+}
+
+// Style popup confirm
+.popup-confirm-dialog {
+
+  .modal-dialog {
+    max-width: 320px;
+  }
+
+  .modal-header {
+    padding: 14px 0 16px 0 !important;
+    border-bottom: unset;
+    text-align: center;
+    position: relative;
+    display: block;
+
+    .modal-title {
+      font-weight: $fw_6;
+      font-size: rem(16);
+      color: $col_black;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .modal-content {
+
+    .modal-header-custom {
+      width: 100%;
+    }
+
+    .content {
+      font-weight: 400;
+      font-size: rem(14);
+      color: #000000;
+      text-align: center;
+      padding: 0 rem(22);
+    }
+  }
+
+  .modal-footer {
+    border-top: unset;
+    justify-content: center;
+    padding: 2.6rem 0 0 0 !important;
+    margin-bottom: 2rem;
+    .btn-popup-entity {
+      min-width: 86px;
+      height: 32px;
+      justify-content: center;
+    }
+    .btn-confirm {
+      background: $col_blue-10;
+      color: $col-white;
+    }
+    .btn-remove {
+      background: #ef4915;
+      color: $col-white;
+    }
+  }
+}
+
+.popup-confirm-dialog-entity {
+  .modal-dialog {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .modal-content {
+      min-width: 320px;
+      min-height: 179px;
+    }
+  }
+
+  button span {
+    font-size: 1.4rem;
+  }
+
+  button.btn-cancel {
+    color: $col_gray-600;
+    min-width: 86px;
+    height: 32px;
+    justify-content: center;
+  }
+}
+
+// Style popup Request Archive
+.request-archive {
+  .modal-dialog {
+    width: 320px;
+    margin-top: 130px;
+  }
+  .modal-content {
+    width: 100%;
+    position: relative;
+  }
+  .modal-header {
+    border: none;
+    padding: 0 !important;
+    .btn-close {
+      position: absolute;
+      right: 11px;
+      top: 11px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: $fw_6;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    width: 276px;
+    text-align: center;
+  }
+
+  .btn-container {
+    .request-archive__btn-confirm {
+      width: 8.4rem;
+      height: 3.2rem;
+      justify-content: center;
+      margin-left: 10px;
+      background-color: $col_blue;
+      color: $col-white;
+      span {
+        font-size: 1.4rem;
+      }
+    }
+    .request-archive__btn-cancel {
+      width: 8.4rem;
+      height: 3.2rem;
+      justify-content: center;
+      color: $col_black;
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    justify-content: center;
+    padding: 2.6rem 0 2.1rem !important;
+  }
+}
+
+// Style popup Confirm Archive
+.request-archive__title.is-admin {
+  margin-top: 16px;
+}
