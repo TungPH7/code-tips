@@ -1,0 +1,62 @@
+.ml-12 {
+    margin-left: 12px;
+}
+
+.select-control {
+    margin: 12px;
+    &__select-all,
+    &__deselect-all {
+        cursor: pointer;
+    }
+    &__select-all {
+        margin-right: 12px;
+    }
+}
+
+.aircraft-filter-menu {
+    .aircraft-type,
+    .aircraft-tail {
+        cursor: pointer;
+        &:hover {
+            background-color: var(--grey5);
+        }
+        &-label {
+            cursor: pointer;
+            margin-left: 8px;
+            padding: 6px 0;
+            flex-grow: 1;
+        }
+    }
+
+    .aircraft-tail {
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &-input {
+            cursor: pointer;
+            margin-left: 31px;
+        }
+    }
+
+    .aircraft-type {
+        background-color: var(--grey5);
+        &__list-wrapper {
+            padding: 6px 12px 0 12px;
+        }
+        &-input {
+            cursor: pointer;
+            margin-left: 12px;
+        }
+    }
+}
+
+.aircraft-archived-cs {
+    padding: 12px 10px;
+    &__input:hover,
+    &__label:hover {
+        cursor: pointer;
+    }
+    &__label {
+        margin-left: 12px;
+    }
+}
